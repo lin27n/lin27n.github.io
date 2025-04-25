@@ -3,45 +3,172 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мои проекты</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Резюме Элины Ахтямовой</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Мои проекты</h1>
-            <p>Здесь собраны мои лучшие работы. Добро пожаловать!</p>
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <p class="greeting">Привет! Меня зовут</p>
+            <h1>АХТЯМОВА ЭЛИНА</h1>
+            <p class="subtitle">Junior Project Manager с опытом в IT и в управлении проектами</p>
+            <a href="#contacts" class="contact-button">Связаться со мной</a>
         </div>
-    </header>
-
-    <main class="container">
-        <!-- Проект 1 -->
-        <section class="project">
-            <img src="images/project1-preview.png" alt="Превью проекта 1">
-            <div class="project-info">
-                <h2>Первый проект</h2>
-                <p>Краткое описание первого проекта. Например, веб-приложение или мобильное приложение.</p>
-                <a href="https://github.com/username/calculator" target="_blank" class="btn">Посмотреть на GitHub</a>
+        
+        <!-- Главное фото с эффектом прозрачности -->
+        <div class="hero-photo">
+            <div class="photo-fade">
+                <img src="images/me.jpg" alt="Элина Ахтямова">
             </div>
-        </section>
-
-        <!-- Проект 2 -->
-        <section class="project">
-            <img src="images/project2-preview.png" alt="Превью проекта 2">
-            <div class="project-info">
-                <h2>Другой проект</h2>
-                <p>Краткое описание второго проекта. Например, веб-приложение или мобильное приложение.</p>
-                <a href="https://github.com/username/another-project" target="_blank" class="btn">Посмотреть на GitHub</a>
-            </div>
-        </section>
-
-        <!-- Добавь больше проектов по аналогии -->
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>© 2025 Ахтямова Элина Альбертовна. Все права защищены.</p>
         </div>
-    </footer>
+    </section>
+
+    <!-- Боковое меню (появляется при скролле) -->
+    <aside id="sidebar" class="sidebar">
+        <div class="sidebar-photo">
+            <img src="images/me.jpg" alt="Элина Ахтямова" id="menu-photo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#hero"><i class="fas fa-home"></i> Главная</a></li>
+                <li><a href="#about"><i class="fas fa-user"></i> Обо мне</a></li>
+                <li><a href="#experience"><i class="fas fa-briefcase"></i> Опыт</a></li>
+                <li><a href="#education"><i class="fas fa-graduation-cap"></i> Образование</a></li>
+                <li><a href="#skills"><i class="fas fa-code"></i> Навыки</a></li>
+                <li><a href="#projects"><i class="fas fa-folder"></i> Проекты</a></li>
+                <li><a href="#contacts"><i class="fas fa-envelope"></i> Контакты</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Обо мне -->
+    <section id="about" class="section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>ОБО МНЕ</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Я начинающий Project Manager с техническим бэкграундом и страстью к организации процессов. Мой подход сочетает аналитическое мышление с вниманием к деталям и умением работать в команде.<br><br><strong>Сейчас моя задача - получить коммерческий опыт ведения проектов.</strong></p>
+                    
+                    <h3>Ключевые аспекты:</h3>
+                    <ul class="about-list">
+                        <li><i class="fas fa-check"></i> Учусь на 3м курсе в Казанском Федеральном Университете по специальности "Прикладная информатика и информатика"</li>
+                        <li><i class="fas fa-check"></i> 2 года опыта управления учебными IT-проектами в рамках инициативы "Сириус.Лето:Начни свой проект"</li>
+                        <li><i class="fas fa-check"></i> Получаю дополнительную профессиональную переподготовку по управлению IT-проектами в университете</li>
+                        <li><i class="fas fa-check"></i> Активно обучаюсь в Школе 21 на ветке "Business System Analysis" (BSA)</li>
+                        <li><i class="fas fa-check"></i> Владею английским языком на уровне Intermediate, есть цель получить сертификат IELTS</li>
+                    </ul>
+                    
+                    <div class="about-goal">
+                        <h3>Моя цель:</h3>
+                        <p>Развиваться как профессиональный Project Manager, участвовать в сложных IT-проектах и эффективно координировать работу команд для достижения выдающихся результатов.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Остальные секции -->
+    <section id="experience" class="section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>ОПЫТ РАБОТЫ</h2>
+            </div>
+
+            <!-- Опыт 4 -->
+            <div class="experience-item">
+                <div class="experience-header">
+                    <h3>Менеджер проектов / Наставник (учебные проекты)</h3>
+                    <span class="company">Сириус.Лето / Университет Талантов</span>
+                    <span class="duration">Ноябрь 2024 – настоящее время</span>
+                </div>
+                <ul class="responsibilities">
+                    <li><i class="fas fa-caret-right"></i> Руководила командой из 5 человек в образовательном IT-проекте по разработке веб приложения</li>
+                    <li><i class="fas fa-caret-right"></i> Ознакомила команду с Битрикс24, вела в работу понятие Agile, проводила еженедельные встречи</li>
+                    <li><i class="fas fa-caret-right"></i> Составляла roadmap проекта и разбивала задачи по спринтам (2-недельные итерации)</li>
+                    <li><i class="fas fa-caret-right"></i> Проводила daily scrum чат-встречи и ретроспективы</li>
+                    <li><i class="fas fa-caret-right"></i> Назначала задачи, создавала бэклоги, контролировала выполнение каждой задачи (было создано ~ 150 задач, успешно завершено ~ 100)</li>
+                </ul>
+                <div class="skills-used">
+                    <span>Scrum</span>
+                    <span>Roadmapping</span>
+                    <span>Управление командой</span>
+                    <span>Agile</span>
+                </div>
+            </div>
+
+            <!-- Опыт 3 -->
+            <div class="experience-item">
+                <div class="experience-header">
+                    <h3>Менеджер проектов / Наставник (учебные проекты)</h3>
+                    <span class="company">Сириус.Лето / Университет Талантов</span>
+                    <span class="duration">Ноябрь 2023 – Июнь 2024</span>
+                </div>
+                <ul class="responsibilities">
+                    <li><i class="fas fa-caret-right"></i> Руководила командой из 5 человек в образовательном IT-проекте по разработке веб приложения</li>
+                    <li><i class="fas fa-caret-right"></i> Ознакомила команду с Битрикс24, вела в работу понятие Agile, проводила еженедельные встречи</li>
+                    <li><i class="fas fa-caret-right"></i> Составляла roadmap проекта и разбивала задачи по спринтам (2-недельные итерации)</li>
+                    <li><i class="fas fa-caret-right"></i> Проводила daily scrum чат-встречи и ретроспективы</li>
+                    <li><i class="fas fa-caret-right"></i> Назначала задачи, создавала бэклоги, контролировала выполнение каждой задачи (было создано ~ 150 задач, успешно завершено ~ 100)</li>
+                </ul>
+                <div class="skills-used">
+                    <span>Scrum</span>
+                    <span>Roadmapping</span>
+                    <span>Управление командой</span>
+                    <span>Agile</span>
+                </div>
+            </div>
+            
+            <!-- Опыт 2 -->
+            <div class="experience-item">
+                <div class="experience-header">
+                    <h3>Помощник руководителя / Ассистент проекта</h3>
+                    <span class="company">Эплекс, Казань</span>
+                    <span class="duration">Июль 2023 – Август 2023</span>
+                </div>
+                <ul class="responsibilities">
+                    <li><i class="fas fa-caret-right"></i> Вела первичную документацию и взаимодействовала с клиентами. </li>
+                    <li><i class="fas fa-caret-right"></i> Поддерживала руководителя в организации рабочих процессов.</li>
+                    <li><i class="fas fa-caret-right"></i> Ассистировала в организации agile-спринтов для IT-команд (подготовка митингов, трекинг задач, формирование протоколов митингов)</li>
+                    <li><i class="fas fa-caret-right"></i> Автоматизировала отчетность с помощью Google Sheets/Excel, сэкономив 5+ часов в неделю</li>
+                    <li><i class="fas fa-caret-right"></i> Ознакомилась с Scrum - подходом, работала с Битрикс24 и Jira</li>
+                </ul>
+                <div class="skills-used">
+                    <span>Клиентоориентированность </span>
+                    <span>Битрикс24</span>
+                    <span>Документооборот</span>
+                    <span>ОперационноеУправление</span>
+                </div>
+            </div>
+
+            <!-- Опыт 1 -->
+            <div class="experience-item">
+                <div class="experience-header">
+                    <h3>Ассистент разработчика (удаленно)</h3>
+                    <span class="company">SellerMarket, Казань</span>
+                    <span class="duration">Ноябрь 2022 – настоящее время</span>
+                </div>
+                <ul class="responsibilities">
+                    <li><i class="fas fa-caret-right"></i> Управляла backlog продукта "ЛК.МАРКЕТ": приоритизация задач, контроль дедлайнов</li>
+                    <li><i class="fas fa-caret-right"></i> Вела коммуникацию между стейкхолдерами (разработчики, клиенты, маркетинг)</li>
+                    <li><i class="fas fa-caret-right"></i> Анализировала feedback пользователей и формировала требования к новым фичам</li>
+                </ul>
+                <div class="skills-used">
+                    <span>Backlog Management</span>
+                    <span>Customer Development</span>
+                    <span>Process Improvement</span>
+                </div>
+            </div>
+    </section>
+
+    <section id="education" class="section">Образование</section>
+    <section id="skills" class="section">Навыки</section>
+    <section id="projects" class="section">Проекты</section>
+    <section id="contacts" class="section">Контакты</section>
+
+    <script src="script.js"></script>
 </body>
 </html>

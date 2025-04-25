@@ -1,0 +1,448 @@
+/* Основные цвета */
+:root {
+    --primary-color: #2A4365; /* Темно-синий */
+    --secondary-color: #4299E1; /* Светло-синий */
+    --dark-color: #1A202C;
+    --medium-color: #2D3748;
+    --light-color: #EDF2F7;
+    --text-color: #E2E8F0;
+    --text-light: #FFFFFF;
+}
+body, .hero, .section {
+    background: var(--dark-color) !important;
+}
+* {
+    transition: all 0.3s ease-out;
+}
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    background: var(--dark-color);
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0 10% 0 15%;
+    background: var(--dark-color);
+    position: relative;
+    background: linear-gradient(
+        to right,
+        var(--dark-color) 0%,
+        var(--dark-color) 60%,
+        rgba(42, 67, 101, 0.2) 100%
+    ) !important;
+}
+
+.hero-content {
+    max-width: 500px;
+    z-index: 2;
+    margin-right: 50px;
+}
+
+.greeting {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin: 0 0 20px 0;
+    color: var(--text-light);
+    line-height: 1.2;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+.contact-button {
+    display: inline-block;
+    padding: 12px 30px;
+    background: var(--primary-color);
+    color: var(--text-light);
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid var(--secondary-color);
+}
+
+.contact-button:hover {
+    background: var(--secondary-color);
+    transform: translateY(-3px);
+}
+
+.hero-photo {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 800px;
+}
+
+.photo-fade {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.photo-fade::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to left, 
+        transparent 0%, 
+        transparent 60%,
+        rgba(42, 67, 101, 0.06) 65%,
+        rgba(42, 67, 101, 0.223) 70%,
+        var(--dark-color) 100%
+    );
+}
+
+.photo-fade img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.hashtag-band {
+    width: 100%;
+    background: var(--primary-color);
+    padding: 10px 0;
+    overflow: hidden;
+    position: relative;
+    z-index: 10;
+}
+
+.hashtag-track {
+    display: inline-flex;
+    white-space: nowrap;
+    will-change: transform;
+}
+
+.hashtag-track span {
+    color: var(--text-light);
+    font-size: 1rem;
+    margin: 0 30px;
+    position: relative;
+    opacity: 0.8;
+    transition: all 0.3s;
+    font-weight: 500;
+}
+
+.hashtag-track span:hover {
+    opacity: 1;
+    color: var(--secondary-color);
+    transform: scale(1.1);
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* Убираем лишние отступы */
+.section {
+    padding: 80px 15% !important;
+}
+
+/* Боковое меню */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background: var(--medium-color);
+    z-index: 1000;
+    padding: 0px 0px;
+    transition: right 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+    border-left: 1px solid var(--primary-color);
+    align-items: center;
+}
+
+.sidebar.active {
+    right: 0;
+}
+
+.sidebar-photo {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    margin: 0 auto 20px;
+    position: relative;
+}
+
+.sidebar-photo img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+    opacity: 1 ; /* Переопределяем скрытие */
+}
+
+.sidebar-photo img.active {
+    opacity: 1;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li a {
+    display: block;
+    padding: 10px 0;
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s;
+    border-bottom: 1px solid transparent;
+}
+
+.sidebar li a:hover {
+    color: var(--secondary-color);
+    border-bottom: 1px solid var(--secondary-color);
+}
+
+.sidebar li a i {
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+}
+
+/* Секции */
+.section {
+    min-height: 100vh;
+    padding: 100px 15%;
+    position: relative;
+    background: var(--dark-color);
+}
+
+.section-container {
+    width: calc(100% - 250px - 10%);
+    max-width: 1200px;
+    margin: 0 5% 0 calc(5% + 125px); /* Магия центрирования */
+    position: relative;
+    left: -60px;
+}
+
+.section-header {
+    text-align: center;
+    width: 100%;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    color: var(--text-light);
+    position: relative;
+    display: inline-block;
+    padding-bottom: 15px;
+}
+
+.section-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: var(--secondary-color);
+}
+
+/* Стили для секции "Обо мне" */
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.about-text {
+    flex: 1;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-left: 5%;
+    max-width: 900px;
+    padding-right: 20px;
+}
+
+.about-text h3 {
+    color: var(--secondary-color);
+    margin-top: 30px;
+}
+
+.about-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.about-list li {
+    margin-bottom: 15px;
+    padding-left: 30px;
+    position: relative;
+}
+
+.about-list li i {
+    position: absolute;
+    left: 0;
+    top: 7px;
+    color: var(--secondary-color);
+    transition: transform 0.3s;
+}
+
+.about-list li:hover i {
+    transform: scale(1.2);
+}
+
+.about-goal {
+    margin-top: 40px;
+    padding: 20px;
+    background: rgba(66, 153, 225, 0.1);
+    border-left: 3px solid var(--secondary-color);
+    border-radius: 0 5px 5px 0;
+}
+
+/* Анимация фото */
+.floating-photo {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    object-fit: cover;
+    z-index: 1001;
+    opacity: 0;
+    transition: all 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    pointer-events: none;
+}
+/* Стили для раздела "Опыт" */
+.experience-item {
+    background: rgba(42, 67, 101, 0.1);
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 30px;
+    border-left: 3px solid var(--secondary-color);
+    transition: transform 0.3s;
+}
+
+.experience-item:hover {
+    transform: translateY(-5px);
+    background: rgba(66, 153, 225, 0.1);
+}
+
+.experience-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.experience-header h3 {
+    color: var(--secondary-color);
+    margin: 0;
+    font-size: 1.3rem;
+}
+
+.company {
+    font-weight: 600;
+    opacity: 0.9;
+}
+
+.duration {
+    background: var(--primary-color);
+    color: white;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+
+.responsibilities {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.responsibilities li {
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.responsibilities li i {
+    position: absolute;
+    left: 0;
+    top: 7px;
+    color: var(--secondary-color);
+    font-size: 0.8rem;
+}
+
+.skills-used {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.skills-used span {
+    background: rgba(66, 153, 225, 0.2);
+    color: var(--secondary-color);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+/* Адаптивность */
+@media (max-width: 992px) {
+    .hero {
+        flex-direction: column;
+        padding: 100px 5% 50px;
+        text-align: center;
+    }
+    .hero-content {
+        margin-right: 0;
+        margin-bottom: 50px;
+    }
+    .hero-photo {
+        width: 300px;
+        height: 300px;
+    }
+    .section {
+        padding: 100px 10%;
+    }
+    .sidebar {
+        display: none;
+        transition: right 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+    .hashtag-track {
+        animation: scroll 15s linear infinite;
+    }
+    .hashtag-track span {
+        font-size: 0.9rem;
+        margin: 0 15px;
+    }
+}
