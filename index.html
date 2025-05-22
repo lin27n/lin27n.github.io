@@ -162,9 +162,112 @@
                     <span>Process Improvement</span>
                 </div>
             </div>
+        </div>
     </section>
 
-    <section id="education" class="section">Образование</section>
+    <section id="education" class="section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>ОБРАЗОВАНИЕ</h2>
+            </div>
+            
+            <div class="education-grid">
+                <!-- Основное образование -->
+                <div class="education-item">
+                    <div class="education-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <div class="education-content">
+                        <h3>Казанский (Приволжский) федеральный университет</h3>
+                        <p class="degree">Прикладная математика и информатика</p>
+                        <p class="duration">2023 – 2026</p>
+                        <ul class="education-features">
+                            <li><i class="fas fa-circle-notch"></i> Предметы: Математический анализ, Дискретная математика, Теория конечных автоматов, Java - технологии</li>
+                            <li><i class="fas fa-circle-notch"></i> 4 года обучения, очно</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Дополнительное образование -->
+                <div class="education-item">
+                    <div class="education-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="education-content">
+                        <h3>Школа Наставников "Сириус.Лето"</h3>
+                        <p class="degree">Наставничество, ведение проектов</p>
+                        <p class="duration">2024</p>
+                    </div>
+                </div>
+                
+                <div class="certificate-gallery">
+                    <div class="certificate-item">
+                        <img src="images/certificates/Сертификат Школа наставников 24.jpg" alt="Сертификат Школы наставников" 
+                            onclick="openModal('images/certificates/Сертификат Школа наставников 24.jpg')">
+                        <p>Сертификат по прохождению Школы Наставников</p>
+                    </div>
+                </div>
+
+                <div class="education-item">
+                    <div class="education-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="education-content">
+                        <h3>Программа "Сириус.Лето: Начни свой проект"</h3>
+                        <p class="degree">Наставничество в 2023/2024 учебном году</p>
+                        <p class="duration">9 месяцев</p>
+                        <ul class="education-features">
+                            <li><i class="fas fa-circle-notch"></i> Руководство учебным IT-проектом</li>
+                            <li><i class="fas fa-circle-notch"></i> Agile, Scrum, управление командой</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="certificate-gallery">
+                    <div class="certificate-item">
+                        <img src="images/certificates/Сертификат Сириус  23-24.jpg" alt="Сертификат Сириус.Лето" 
+                            onclick="openModal('images/certificates/Сертификат Сириус  23-24.jpg')">
+                        <p>Сертификат наставника инициативы "Сириус.Лето: Начни свой проект" в 2023-2024 гг.</p>
+                    </div>
+                </div>
+
+                <div class="education-item">
+                    <div class="education-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="education-content">
+                        <h3>Программа "Сириус.Лето: Начни свой проект"</h3>
+                        <p class="degree">Наставничество в 2024/2025 учебном году</p>
+                        <p class="duration">9 месяцев</p>
+                        <ul class="education-features">
+                            <li><i class="fas fa-circle-notch"></i> Руководство учебным IT-проектом</li>
+                            <li><i class="fas fa-circle-notch"></i> Agile, Scrum, управление командой</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="certificate-gallery">
+                    <div class="certificate-item">
+                        <img src="images/certificates/Благодарственное письмо.jpg" alt="Благодарственное письмо" 
+                            onclick="openModal('images/certificates/Благодарственное письмо.jpg')">
+                        <p>Благодарственное письмо за профессиональную подготовку участника в конкурсу "Большие вызовы" в 2024 г.</p>
+                    </div>
+                    <div class="certificate-item">
+                        <img src="images/certificates/Диплом Лилии.jpg" alt="Диплом участника" 
+                            onclick="openModal('images/certificates/Диплом Лилии.jpg')">
+                        <p>Диплом участника инициативы "Сириус.Лето: Начни свой проект" в 2024-2025 гг., который получил призовое место</p>
+                    </div>
+                </div>
+
+                <div id="certificateModal" class="modal">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <img class="modal-content" id="modalImage">
+                    <div id="caption"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="skills" class="section">Навыки</section>
     <section id="projects" class="section">Проекты</section>
     <section id="contacts" class="section">Контакты</section>

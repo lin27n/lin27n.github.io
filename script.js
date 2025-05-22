@@ -78,3 +78,23 @@ document.addEventListener('DOMContentLoaded', function() {
     // Запускаем анимацию
     animateHashtags();
 });
+
+// Модальное окно для сертификатов
+function openModal(src) {
+    const modal = document.getElementById('certificateModal');
+    const modalImg = document.getElementById('modalImage');
+    modal.style.display = "block";
+    modalImg.src = src;
+}
+
+function closeModal() {
+    document.getElementById('certificateModal').style.display = "none";
+}
+
+// Закрытие по клику вне изображения
+window.onclick = function(event) {
+    const modal = document.getElementById('certificateModal');
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
